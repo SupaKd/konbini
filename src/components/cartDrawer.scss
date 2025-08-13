@@ -1,0 +1,15 @@
+@import "../styles/_variables.scss";
+
+.drawer__overlay{ position:fixed; inset:0; background:rgba(0,0,0,.3); backdrop-filter:saturate(120%) blur(2px); z-index:49 }
+.drawer{ position:fixed; right:0; top:0; bottom:0; width:min(420px, 100%); background:#fff; border-left:2px solid $ink; z-index:50; display:flex; flex-direction:column }
+.drawer__header{ display:flex; align-items:center; justify-content:space-between; padding:1rem; border-bottom:2px solid $ink }
+.drawer__body{ padding:1rem; overflow:auto; display:flex; flex-direction:column; gap:1rem }
+.row{ display:grid; grid-template-columns:72px 1fr; gap:.6rem; align-items:center; }
+.row img{ width:72px; height:72px; object-fit:cover; border:2px solid $ink; border-radius:12px }
+.col{ display:flex; flex-direction:column; gap:.2rem }
+.qty{ display:flex; align-items:center; gap:.4rem }
+.qty input{ width:70px; padding:.4rem; border:2px solid $ink; border-radius:10px }
+.drawer__footer{ margin-top:auto; padding:1rem; border-top:2px solid $ink; display:grid; gap:.8rem }
+.totals{ display:grid; gap:.4rem }
+.totals .hr{ height:2px; background:$ink; opacity:.2; margin:.3rem 0 }
+.total{ font-size:1.05rem }

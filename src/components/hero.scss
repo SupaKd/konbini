@@ -1,0 +1,40 @@
+@import "../styles/_variables.scss";
+
+.hero {
+  padding: 2rem 0 1rem;
+  border-bottom: 2px solid $ink;
+  background: radial-gradient(1200px 400px at 80% -10%, #fff, $beige);
+}
+.hero__grid {
+  display: grid;
+  gap: 1.2rem;
+  align-items: center;
+}
+.hero__copy h1 {
+  font-size: clamp(1.6rem, 3.5vw, 3rem);
+  line-height: 1.1;
+  margin: 0 0 0.5rem;
+}
+.hero__copy p {
+  margin: 0 0 1rem;
+  color: $muted;
+}
+.cta {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.hero__img {
+  width: 100%;
+  border: 2px solid $ink;
+  border-radius: 20px;
+  box-shadow: 12px 12px 0 $ink;
+}
+@media (min-width: 900px) {
+  .hero {
+    padding: 3rem 0 2rem;
+  }
+  .hero__grid {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}
