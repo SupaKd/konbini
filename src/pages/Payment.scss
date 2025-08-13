@@ -1,0 +1,29 @@
+@import "../styles/_variables.scss";
+
+.pay { padding: 1.5rem 0; }
+.layout { display: grid; gap: 1rem; }
+
+.form { padding: 1rem; display: grid; gap: .8rem; }
+.methods { display:flex; gap:1rem; }
+.grid { display: grid; gap: .6rem; }
+.field { display:grid; gap:.3rem; }
+.field input { padding:.7rem; border:2px solid $ink; border-radius:12px; }
+.field.inline { grid-template-columns: 1fr 1fr; gap: .6rem; }
+
+.summary { padding:1rem; display:grid; gap:.8rem; align-self:start; }
+.items { display:grid; gap:.6rem; max-height: 50vh; overflow:auto; }
+.line { display:grid; grid-template-columns:56px 1fr auto; gap:.6rem; align-items:center; }
+.line img{ width:56px; height:56px; object-fit:cover; border-radius:10px; border:2px solid $ink; }
+.col{ display:flex; flex-direction:column; }
+.amt{ font-weight:900; }
+.totals{ display:grid; gap:.4rem; }
+.totals .hr{ height:2px; background:$ink; opacity:.2; margin:.3rem 0 }
+.total{ font-size:1.05rem }
+.fine{ font-size:.85rem; color:$muted }
+
+@media(min-width: 900px){
+  .layout { grid-template-columns: 1.1fr .9fr; align-items:start; }
+}
+
+:root[data-theme='dark'] .field input{ background:#0f1629; color:#f5f7fb; border-color:#e6e8ef }
+:root[data-theme='dark'] .summary{ background:#0f1629; border-color:#e6e8ef }
