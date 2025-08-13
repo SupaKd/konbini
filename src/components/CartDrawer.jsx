@@ -1,4 +1,5 @@
 import { createPortal } from "react-dom";
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useCart } from "../context/CartContext.jsx";
 import "./cartDrawer.scss";
@@ -42,7 +43,9 @@ export default function CartDrawer({ open, onClose }){
                 <div className="hr"></div>
                 <div className="total"><span>Total : </span><strong>{total.toFixed(2)} €</strong></div>
               </div>
-              <a className="btn" href="/payment">Passer au paiement</a>
+              <Link to="/payment">
+              <button className="btn" onClick={onClose}>Passer au paiement</button>
+              </Link>
             </footer>
           </motion.aside>
         </>
