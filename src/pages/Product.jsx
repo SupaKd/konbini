@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import { PRODUCTS } from "../data/product.js";
 import { useCart } from "../context/CartContext.jsx";
 import { motion } from "framer-motion";
-import "./Product.scss";
+import "./product.scss";
 
 export default function Product(){
   const { id } = useParams();

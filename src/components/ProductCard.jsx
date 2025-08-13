@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext.jsx";
 import { useToast } from "../context/ToastContext.jsx"; // ← ajout
-import "./ProductCard.scss";
+import "./productCard.scss";
 
 export default function ProductCard({ product }) {
   const { add } = useCart();

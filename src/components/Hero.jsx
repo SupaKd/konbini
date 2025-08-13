@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import "./Hero.scss";
+import "./hero.scss";
 import { Link } from "react-router-dom";
 
 export default function Hero(){

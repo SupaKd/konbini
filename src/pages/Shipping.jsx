@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useCheckout } from "../context/CheckoutContext.jsx";
 import { useCart } from "../context/CartContext.jsx";
-import "./Shipping.scss";
+import "./shipping.scss";
 
 export default function Shipping() {
   const nav = useNavigate();

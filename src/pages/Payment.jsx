@@ -3,7 +3,7 @@ import { useState, useMemo } from "react";
 import { useCart } from "../context/CartContext.jsx";
 import { Link, useNavigate } from "react-router-dom";
 import { useCheckout } from "../context/CheckoutContext.jsx";
-import "./Payment.scss";
+import "./payment.scss";
 
 export default function Payment(){
   const navigate = useNavigate();

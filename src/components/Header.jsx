@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { ShoppingCart, Menu, X } from "lucide-react";
 import { useCart } from "../context/CartContext.jsx";
 import CartDrawer from "./CartDrawer.jsx";
-import "./Header.scss";
+import "./header.scss";
 
 export default function Header(){
   const { items } = useCart();

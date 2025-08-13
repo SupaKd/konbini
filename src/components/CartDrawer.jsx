@@ -1,7 +1,7 @@
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useCart } from "../context/CartContext.jsx";
-import "./CartDrawer.scss";
+import "./cartDrawer.scss";
 
 export default function CartDrawer({ open, onClose }){
   const { items, subtotal, shipping, total, setQty, remove, clear } = useCart();
