@@ -1,0 +1,131 @@
+.checkout {
+    padding: 1.5rem 0;
+  
+    h2 {
+      margin-bottom: 1rem;
+    }
+  
+    /* Mobile: 1 colonne */
+    &__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      width: 100%;
+    }
+  
+    &__card {
+      background: var(--card);
+      padding: 1rem;
+      border-radius: 20px;
+      box-shadow: #111;
+      border: 1.5px solid var(--border);
+    }
+  
+    &__item {
+      display: grid;
+      grid-template-columns: 64px minmax(0, 1fr) auto; // minmax pour éviter le débordement
+      gap: 0.6rem;
+      align-items: center;
+      padding: 0.6rem 0;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+  
+      &:last-child {
+        border-bottom: none;
+      }
+  
+      img {
+        width: 64px;
+        height: 64px;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 2px solid #111;
+        display: block;
+      }
+    }
+  
+    &__details {
+      display: flex;
+      flex-direction: column;
+      min-width: 0; // clé pour empêcher le texte de forcer un scroll horizontal
+    }
+  
+    &__title {
+      font-weight: 700;
+      line-height: 1.2;
+      word-break: break-word;
+    }
+  
+    &__actions {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      margin-top: 0.2rem;
+  
+      input {
+        width: 50px;
+        padding: 0.4rem;
+        border: 2px solid #111;
+        border-radius: 10px;
+        font: inherit;
+      }
+  
+      .btn--outline {
+        flex-shrink: 0;
+        padding: 0.2rem 0.4rem;
+      }
+    }
+  
+    &__price {
+      font-weight: 900;
+      white-space: nowrap;
+      text-align: right;
+    }
+  
+    &__summary {
+      display: grid;
+      gap: 0.6rem;
+  
+      .btn {
+        width: 100%;
+        color: #111;
+      }
+    }
+  
+    &__row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+  
+    &__divider {
+      height: 2px;
+      background: #111;
+      opacity: 0.18;
+      margin: 0.4rem 0;
+    }
+  
+    /* Tablette et + : 2 colonnes */
+    @media (min-width: 768px) {
+      &__grid {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+      }
+  
+      &__item {
+        grid-template-columns: 72px minmax(0, 1fr) auto;
+  
+        img {
+          width: 72px;
+          height: 72px;
+          border-radius: 12px;
+        }
+      }
+  
+      &__totals {
+        position: sticky;
+        top: 1rem;
+        height: fit-content;
+      }
+    }
+  }
+  
