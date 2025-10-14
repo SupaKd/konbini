@@ -1,13 +1,11 @@
-// src/components/ProductCard.jsx
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext.jsx";
-import { useToast } from "../context/ToastContext.jsx"; // ← ajout
+import { useToast } from "../context/ToastContext.jsx";
 import "./productCard.scss";
 
 export default function ProductCard({ product }) {
   const { add } = useCart();
-  const { show } = useToast(); // ← ajout
+  const { show } = useToast();
 
   const avg = product.rating?.avg ?? 0;
   const count = product.rating?.count ?? 0;
@@ -16,7 +14,7 @@ export default function ProductCard({ product }) {
   ).join("");
 
   return (
-    <motion.article className="product card" whileHover={{ y: -3 }}>
+    <article className="product card">
       <div className="product__imgWrap">
         <Link to={`/product/${product.id}`}>
           <img src={product.img} alt={product.title} loading="lazy" />
@@ -41,12 +39,10 @@ export default function ProductCard({ product }) {
           <span className="price">
             {product.price.toFixed(2)} €
             {product.compareAt && (
-              <del style={{ marginLeft: 8, opacity: 0.6 }}>
-                {Number(product.compareAt).toFixed(2)} €
-              </del>
+              <del>{Number(product.compareAt).toFixed(2)} €</del>
             )}
           </span>
-          <div style={{ display: "flex", gap: ".4rem" }}>
+          <div className="product__actions">
             <Link className="btn--outline" to={`/product/${product.id}`}>
               Voir
             </Link>
@@ -54,7 +50,7 @@ export default function ProductCard({ product }) {
               className="btn"
               onClick={() => {
                 add(product, 1);
-                show("Ajouté au panier"); // ← toast
+                show("Ajouté au panier");
               }}
             >
               Ajouter
@@ -62,6 +58,6 @@ export default function ProductCard({ product }) {
           </div>
         </div>
       </div>
-    </motion.article>
+    </article>
   );
 }

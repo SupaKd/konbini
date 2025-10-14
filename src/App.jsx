@@ -17,7 +17,7 @@ export default function App() {
   return (
     <div className="app">
       <Header />
-      <main style={{ position:"relative" }}>
+      <main>
         <AnimatePresence mode="wait">
           <motion.div
             key={location.pathname}

@@ -1,82 +1,131 @@
-/* src/pages/Shipping.scss — mobile-first */
-@import "../styles/_variables.scss";
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$light-bg: #fff;
+$dark-bg: #1c1c1c;
+$light-text: #111;
+$dark-text: #f5f5f5;
+$accent: #111;
+$card-radius: 12px;
 
-/* Page */
 .shipping {
-  padding: 1.5rem 0;
-}
+  padding: 2rem 1rem;
+  font-family: $font-family;
 
-/* Card form */
-.shipping .card {
-  padding: 1rem;
-  display: grid;
-  gap: .8rem;
-  border: 1.5px solid $ink;
-  border-radius: $radius;
-  background: #fff;
-  box-shadow: $shadow;
-  max-width: 760px;
-  margin: 0 auto;
-}
-
-/* Labels */
-.shipping label {
-  font-weight: 700;
-  font-size: .95rem;
-}
-
-/* Inputs */
-.shipping input,
-.shipping textarea {
-  width: 100%;
-  padding: .7rem .8rem;
-  border: 2px solid $ink;
-  border-radius: 12px;
-  background: #fff;
-  transition: box-shadow .15s ease, border-color .15s ease;
-}
-
-.shipping input:focus,
-.shipping textarea:focus {
-  outline: none;
-  box-shadow: 0 0 0 4px rgba(0,0,0,.08);
-}
-
-/* Field rows made with inline grids in JSX */
-.shipping .row {
-  display: grid;
-  gap: .6rem;
-}
-
-/* Buttons row */
-.shipping .actions {
-  display: flex;
-  gap: .6rem;
-  margin-top: .2rem;
-}
-
-/* Helper text */
-.shipping .hint {
-  font-size: .85rem;
-  color: $muted;
-}
-
-/* Desktop */
-@media (min-width: 820px) {
-  .shipping { padding: 2rem 0; }
-}
-
-/* Dark mode */
-:root[data-theme='dark'] {
-  .shipping .card { background: #0f1629; border-color: #e6e8ef; box-shadow: none; }
-  .shipping input,
-  .shipping textarea {
-    background: #0f1629;
-    color: #f5f7fb;
-    border-color: #e6e8ef;
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
   }
-  .shipping input:focus,
-  .shipping textarea:focus {
-    box-shadow: 0 0 0 4px rgba(230,232,239,.15);
+
+  .card {
+    background-color: #fff;
+    color: #111;
+    border-radius: $card-radius;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .row {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 1rem;
+
+      input, textarea {
+        width: 100%;
+        padding: 0.5rem 0.75rem;
+        border: 1px solid rgba(0,0,0,0.2);
+        border-radius: 8px;
+        background-color: #eee;
+        color: #111;
+        font-family: $font-family;
+        font-size: 0.95rem;
+        transition: border-color 0.3s ease, box-shadow 0.2s ease;
+
+        &:focus {
+          outline: none;
+          border-color: $accent;
+          box-shadow: 0 0 0 2px rgba($accent, 0.2);
+        }
+      }
+
+      label {
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin-bottom: 0.25rem;
+        display: block;
+      }
+
+      .hint {
+        font-size: 0.8rem;
+        color: rgba($light-text,0.6);
+        margin-top: 0.25rem;
+      }
+    }
+
+    textarea {
+      resize: vertical;
+      border-radius: 8px;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1rem;
+
+      .btn, .btn--outline {
+        padding: 0.6rem 1.2rem;
+        font-weight: 600;
+        font-size: 0.95rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      .btn {
+        border: none;
+        background-color: $accent;
+        color: #fff;
+
+        &:hover:not(:disabled) {
+          background-color: darken($accent, 10%);
+          transform: translateY(-2px);
+        }
+
+        &:disabled {
+          background-color: rgba($accent,0.5);
+          cursor: not-allowed;
+        }
+      }
+
+      .btn--outline {
+        border: 1px solid $accent;
+        background: transparent;
+        color: $accent;
+
+        &:hover {
+          background-color: $accent;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+// Theme support
+[data-theme="dark"] {
+  --bg: $dark-bg;
+  --text: $dark-text;
+}
+
+// Responsive
+@media screen and (max-width: 768px) {
+  .shipping .card .row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .shipping .card .actions {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }

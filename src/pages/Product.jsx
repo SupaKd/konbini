@@ -1,12 +1,10 @@
-// src/pages/Product.jsx
 import { useParams, Link } from "react-router-dom";
 import { useMemo, useState } from "react";
 import { PRODUCTS } from "../data/product.js";
 import { useCart } from "../context/CartContext.jsx";
-import { motion } from "framer-motion";
 import "./product.scss";
 
-export default function Product(){
+export default function Product() {
   const { id } = useParams();
   const product = useMemo(() => PRODUCTS.find(p => String(p.id) === id), [id]);
   const { add } = useCart();
@@ -24,9 +22,9 @@ export default function Product(){
 
   if (!product) {
     return (
-      <section className="container product-page" style={{ padding: "1.5rem 0" }}>
+      <section className="container product-page">
         <p>Produit introuvable.</p>
-        <Link to="/catalog" className="btn--outline" style={{ marginTop: "1rem" }}>
+        <Link to="/catalog" className="btn--outline">
           Retour au catalogue
         </Link>
       </section>
@@ -49,14 +47,11 @@ export default function Product(){
         {/* Galerie */}
         <div className="gallery card">
           {gallery[active] && (
-            <motion.img
+            <img
               key={gallery[active]}
               src={gallery[active]}
               alt={product.title}
               className="hero"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.25 }}
             />
           )}
           {gallery.length > 1 && (

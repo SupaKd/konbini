@@ -10,19 +10,16 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   min-height: 100%;
-  overflow-x: hidden;
-}
-
-body {
   margin: 0;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
+    Arial, sans-serif;
   background: $beige;
   color: $ink;
   line-height: 1.5;
-  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 img {
@@ -48,10 +45,8 @@ select {
    ========================= */
 :root {
   color-scheme: light dark;
-
   --bg: $beige;
   --text: $ink;
-  --muted: $muted;
   --card: #fff;
   --border: $ink;
   --tag-bg: $navy;
@@ -64,7 +59,6 @@ select {
 [data-theme="dark"] {
   --bg: #0f0f0f;
   --text: #f5f5f5;
-  --muted: #aaa;
   --card: #1a1a1a;
   --border: #f5f5f5;
   --tag-bg: $green;
@@ -75,81 +69,10 @@ select {
 }
 
 /* =========================
-   DARK MODE OVERRIDES
-   ========================= */
-:root[data-theme="dark"] body {
-  background: #0c1222;
-  color: #f5f7fb;
-}
-
-:root[data-theme="dark"] .card {
-  background: #0f1629;
-  border-color: #e6e8ef;
-  box-shadow: none;
-}
-
-:root[data-theme="dark"] .btn {
-  background: #b02a35;
-  color: #fff;
-  border-color: #e6e8ef;
-  box-shadow: 4px 4px 0 #e6e8ef;
-}
-
-:root[data-theme="dark"] .btn--outline {
-  background: transparent;
-  color: #f5f7fb;
-  border-color: #e6e8ef;
-  box-shadow: 4px 4px 0 #e6e8ef;
-}
-
-:root[data-theme="dark"] .tag {
-  background: #1f2b4a;
-}
-
-:root[data-theme="dark"] .header {
-  background: #0c1222;
-  border-color: #e6e8ef;
-}
-
-:root[data-theme="dark"] .nav a {
-  background: #0f1629;
-  color: #f5f7fb;
-  border-color: #e6e8ef;
-  box-shadow: 4px 4px 0 #e6e8ef;
-}
-
-:root[data-theme="dark"] .hero {
-  background: radial-gradient(1200px 400px at 80% -10%, #0f1629, #0c1222);
-}
-
-:root[data-theme="dark"] .product__imgWrap {
-  background: #0f1629;
-}
-
-:root[data-theme="dark"] .drawer {
-  background: #0f1629;
-  border-color: #e6e8ef;
-}
-
-:root[data-theme="dark"] .drawer__overlay {
-  background: rgba(0, 0, 0, 0.45);
-}
-
-:root[data-theme="dark"] .footer {
-  background: #0f1629;
-  border-color: #e6e8ef;
-}
-
-:root[data-theme="dark"] .footer__bar {
-  border-color: #e6e8ef;
-}
-
-/* =========================
    LAYOUT HELPERS
    ========================= */
 .container {
   @include container;
-  width: 100%;
   max-width: 1200px;
   margin-inline: auto;
   padding-inline: 1rem;
@@ -162,7 +85,7 @@ select {
 }
 
 .minw0 {
-  min-width: 0; // utile dans les grilles pour éviter le débordement
+  min-width: 0;
 }
 
 /* =========================
@@ -172,19 +95,6 @@ select {
   background: var(--card);
   border: 1.5px solid var(--border);
   border-radius: $radius;
-  box-shadow: $shadow;
-}
-
-.btn {
-  @include button-base;
-  background: var(--btn-bg);
-  color: #111;
-}
-
-.btn--outline {
-  @include button-base;
-  background: var(--btn-outline-bg);
-  color: var(--btn-outline-text);
 }
 
 .tag {
@@ -196,9 +106,8 @@ select {
 }
 
 /* =========================
-   MISC
+   MAIN
    ========================= */
 main {
   min-height: 60vh;
-  padding: 0 1rem;
 }

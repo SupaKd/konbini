@@ -1,131 +1,187 @@
 .checkout {
-    padding: 1.5rem 0;
-  
-    h2 {
-      margin-bottom: 1rem;
-    }
-  
-    /* Mobile: 1 colonne */
-    &__grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      width: 100%;
-    }
-  
-    &__card {
-      background: var(--card);
-      padding: 1rem;
-      border-radius: 20px;
-      box-shadow: #111;
-      border: 1.5px solid var(--border);
-    }
-  
-    &__item {
-      display: grid;
-      grid-template-columns: 64px minmax(0, 1fr) auto; // minmax pour éviter le débordement
-      gap: 0.6rem;
-      align-items: center;
-      padding: 0.6rem 0;
-      border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
-  
-      &:last-child {
-        border-bottom: none;
-      }
-  
-      img {
-        width: 64px;
-        height: 64px;
-        object-fit: cover;
-        border-radius: 10px;
-        border: 2px solid #111;
-        display: block;
-      }
-    }
-  
-    &__details {
-      display: flex;
-      flex-direction: column;
-      min-width: 0; // clé pour empêcher le texte de forcer un scroll horizontal
-    }
-  
-    &__title {
-      font-weight: 700;
-      line-height: 1.2;
-      word-break: break-word;
-    }
-  
-    &__actions {
-      display: flex;
-      gap: 0.5rem;
-      align-items: center;
-      margin-top: 0.2rem;
-  
-      input {
-        width: 50px;
-        padding: 0.4rem;
-        border: 2px solid #111;
-        border-radius: 10px;
-        font: inherit;
-      }
-  
-      .btn--outline {
-        flex-shrink: 0;
-        padding: 0.2rem 0.4rem;
-      }
-    }
-  
-    &__price {
-      font-weight: 900;
-      white-space: nowrap;
-      text-align: right;
-    }
-  
-    &__summary {
-      display: grid;
-      gap: 0.6rem;
-  
-      .btn {
-        width: 100%;
-        color: #111;
-      }
-    }
-  
-    &__row {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-  
-    &__divider {
-      height: 2px;
-      background: #111;
-      opacity: 0.18;
-      margin: 0.4rem 0;
-    }
-  
-    /* Tablette et + : 2 colonnes */
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  h2 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #111;
+    letter-spacing: 0.5px;
+
     @media (min-width: 768px) {
-      &__grid {
-        grid-template-columns: 2fr 1fr;
-        align-items: start;
-      }
-  
-      &__item {
-        grid-template-columns: 72px minmax(0, 1fr) auto;
-  
-        img {
-          width: 72px;
-          height: 72px;
-          border-radius: 12px;
-        }
-      }
-  
-      &__totals {
-        position: sticky;
-        top: 1rem;
-        height: fit-content;
+      font-size: 3.2rem;
+    }
+  }
+
+  // =========================
+  //  GRILLE PRINCIPALE
+  // =========================
+  &__grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: start;
+
+    @media (max-width: 850px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // =========================
+  //  CARTE GÉNÉRALE
+  // =========================
+  &__card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      text-align: center;
+      color: #222;
+      letter-spacing: 0.4px;
+    }
+  }
+
+  // =========================
+  //  RÉCAP PRODUITS
+  // =========================
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+    img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  }
+
+  &__details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  &__title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #222;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+
+    input {
+      width: 50px;
+      text-align: center;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 6px;
+      padding: 0.3rem;
+      font-size: 0.9rem;
+      outline: none;
+    }
+
+    .btn--outline {
+      background: transparent;
+      border: 1px solid #111;
+      color: #111;
+      padding: 0.3rem 0.7rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: #111;
+        color: #fff;
       }
     }
   }
-  
+
+  &__price {
+    font-weight: 600;
+    color: #444;
+    margin-top: 0.3rem;
+    font-size: 0.95rem;
+  }
+
+  // =========================
+  //  CARTE TOTAL
+  // =========================
+  &__totals {
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: #fafafa;
+
+    .checkout__summary {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+
+    .checkout__row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #333;
+      letter-spacing: 0.3px;
+      line-height: 1.6;
+
+      &--total {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #111;
+        margin-top: 0.5rem;
+      }
+    }
+
+    .checkout__divider {
+      height: 1px;
+      background: rgba(0, 0, 0, 0.1);
+      width: 100%;
+    }
+
+    .checkout__btn {
+      margin-top: 1rem;
+      display: inline-block;
+      text-decoration: none;
+      background: #111;
+      color: #fff;
+      padding: 0.9rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+
+      &:hover {
+        background-color: darken(#111, 8%);
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
