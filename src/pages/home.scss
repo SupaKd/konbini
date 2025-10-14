@@ -1,6 +1,7 @@
 /* src/pages/home.scss */
 
 .home {
+  background-color: #EBF1F9;
   /* ======== SECTION PRODUITS POPULAIRES ======== */
   &__featured {
     margin: 2rem 0;
@@ -8,7 +9,7 @@
     h2 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
-      color: #111;
+      color: #1d3557;
     }
 
     .grid {
@@ -16,8 +17,7 @@
       gap: 1rem;
       grid-template-columns: 1fr; // mobile: 1 produit par ligne
       @media screen and (min-width: 768px) {
-        grid-template-columns: repeat(3, 1fr); 
-        
+        grid-template-columns: repeat(3, 1fr);
       }
     }
 
@@ -28,87 +28,19 @@
       .btn {
         text-align: center;
         margin-top: 1rem;
-        border: solid 2px #111;
         color: #111;
         border-radius: 2rem;
         padding: 1rem;
         text-decoration: none;
+        background-color: #e9c46a;
+        color: #fff;
 
         &:hover {
-          background-color: #111;
+          background-color: #1d3557;
           color: #fff;
           transition: background-color 0.3s ease, color 0.3s ease;
         }
       }
     }
   }
-
-  /* ======== SECTION NOUS TROUVER ======== */
-  .home__find-us {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 2rem 1rem;
-  
-    &-text {
-      text-align: center;
-  
-      h2 {
-        font-size: 1.8rem;
-        margin-bottom: 0.5rem;
-      }
-  
-      p {
-        font-size: 1rem;
-        margin-bottom: 1rem;
-        max-width: 400px;
-      }
-  
-      .btn {
-        display: inline-block;
-        padding: 0.75rem 1.5rem;
-        background-color: #111;
-        color: var(--btn-text);
-        border: none;
-        border-radius: 8px;
-        text-decoration: none;
-        transition: background-color 0.3s ease;
-  
-        &:hover {
-          background-color: #fff;
-        }
-      }
-    }
-  
-    &-map {
-      width: 100%;
-      max-width: 500px;
-      height: 300px;
-      iframe {
-        width: 100%;
-        height: 100%;
-        border: 0;
-        border-radius: 12px;
-      }
-    }
-  
-    // Desktop
-    @media screen and (min-width: 768px) {
-      flex-direction: row;
-      align-items: flex-start;
-      justify-content: space-between;
-  
-      &-text {
-        text-align: left;
-        max-width: 50%;
-      }
-  
-      &-map {
-        max-width: 50%;
-        height: 400px;
-      }
-    }
-  }
-  
 }

@@ -72,7 +72,7 @@ export default function CartDrawer({ open, onClose }) {
               <strong>{total.toFixed(2)} €</strong>
             </div>
           </div>
-          <Link to="/payment">
+          <Link to="/shipping">
             <button className="btn" onClick={onClose}>
               Passer au paiement
             </button>

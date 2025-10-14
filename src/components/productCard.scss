@@ -11,16 +11,14 @@ $card-radius: 12px;
 // Card
 .product.card {
   font-family: $font-family;
-  background-color: var(--bg, $light-bg);
+  background-color: #EBF1F9;
   color: var(--text, $light-text);
   border-radius: $card-radius;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
   margin: 2rem 0 1rem 0;
 
   &:hover {
-    transform: translateY(-3px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   }
 
@@ -110,14 +108,14 @@ $card-radius: 12px;
           font-weight: 600;
           font-size: 0.9rem;
           color: #fff;
-          background-color: $accent;
+          background-color: #1d3557;
           border: none;
           border-radius: 8px;
           cursor: pointer;
           transition: background-color 0.3s ease, transform 0.2s ease;
 
           &:hover {
-            background-color: darken($accent, 10%);
+            background-color: darken(#1d3557, 10%);
             transform: translateY(-2px);
           }
         }
@@ -126,16 +124,16 @@ $card-radius: 12px;
           padding: 0.5rem 1rem;
           font-weight: 600;
           font-size: 0.9rem;
-          color: $accent;
+          color: #1d3557;
           background: transparent;
-          border: 2px solid $accent;
+          border: 2px solid #1d3557;
           border-radius: 8px;
           cursor: pointer;
           transition: background-color 0.3s ease, color 0.3s ease,
             transform 0.2s ease;
 
           &:hover {
-            background-color: $accent;
+            background-color: #1d3557;
             color: #fff;
             transform: translateY(-2px);
           }

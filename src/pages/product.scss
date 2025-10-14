@@ -37,6 +37,7 @@
         width: 100%;
         border-radius: 12px;
         object-fit: cover;
+        background-color: #fff;
       }
 
       .thumbs {
@@ -119,6 +120,8 @@
           padding: 0.4rem;
           border-radius: 6px;
           border: 1px solid #ccc;
+          background-color: #fff;
+          color: #000;
         }
 
         .btn {

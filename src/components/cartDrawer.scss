@@ -24,7 +24,7 @@ $border-radius: 12px;
   right: 0;
   width: $drawer-width;
   height: 100%;
-  background-color: #fff;
+  background-color: #EBF1F9;
   color: var(--text, $light-text);
   box-shadow: -5px 0 30px rgba(0,0,0,0.1);
   display: flex;
@@ -54,6 +54,7 @@ $border-radius: 12px;
         background: transparent;
         border: none;
         cursor: pointer;
+        color:#111;
       }
     }
 

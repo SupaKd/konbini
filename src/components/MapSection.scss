@@ -4,7 +4,7 @@
     align-items: center;
     gap: 2rem;
     padding: 4rem 1.5rem;
-    background: #F5EFE6;
+    background: #EBF1F9;
   
     &__content {
       max-width: 600px;
@@ -15,6 +15,16 @@
       font-size: 2rem;
       margin-bottom: 1rem;
       color: #111;
+      @media screen and (min-width: 768px) {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+        letter-spacing: 0.5px;
+      }
+      @media screen and (min-width: 1024px) {
+        font-size: 3.5rem;
+        
+      }
     }
   
     &__text {

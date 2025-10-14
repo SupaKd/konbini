@@ -46,7 +46,7 @@ export default function Header() {
       <div className="header__container">
         {/* LOGO */}
         <Link to="/" className="header__logo">
-          Konbini
+          E-COM
         </Link>
 
         {/* NAVIGATION */}
@@ -55,7 +55,7 @@ export default function Header() {
             Accueil
           </NavLink>
           <NavLink to="/catalog" onClick={() => setOpen(false)}>
-            Catalogue
+            Produits
           </NavLink>
           <NavLink to="/checkout" onClick={() => setOpen(false)}>
             Commander

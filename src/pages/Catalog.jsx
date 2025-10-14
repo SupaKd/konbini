@@ -16,7 +16,7 @@ export default function Catalog(){
 
   return (
     <section className="catalog container">
-  <h2>Catalogue</h2>
+  <h2>Produits</h2>
   <div className="search-bar">
     <input 
       placeholder="Recherche" 
