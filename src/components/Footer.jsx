@@ -14,7 +14,7 @@ export default function Footer() {
           <h4>Liens</h4>
           <ul>
             <li>
-              <a href="/catalog">Catalogue</a>
+              <a href="/catalog">Produits</a>
             </li>
             <li>
               <a href="/checkout">Commander</a>

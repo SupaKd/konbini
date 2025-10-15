@@ -46,11 +46,12 @@ export default function Header() {
       <div className="header__container">
         {/* LOGO */}
         <Link to="/" className="header__logo">
-          E-COM
+          <img src="/red.png" alt="Logo" />
         </Link>
 
         {/* NAVIGATION */}
         <nav className={`header__nav ${open ? "is-open" : ""}`}>
+          <img className="header__nav-logo" src="/red.png" alt="" />
           <NavLink to="/" onClick={() => setOpen(false)}>
             Accueil
           </NavLink>

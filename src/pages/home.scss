@@ -17,7 +17,7 @@
       gap: 1rem;
       grid-template-columns: 1fr; // mobile: 1 produit par ligne
       @media screen and (min-width: 768px) {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
       }
     }
 
@@ -32,11 +32,11 @@
         border-radius: 2rem;
         padding: 1rem;
         text-decoration: none;
-        background-color: #e9c46a;
+        background-color: #E32236;
         color: #fff;
 
         &:hover {
-          background-color: #1d3557;
+          background-color: #e9c46a;
           color: #fff;
           transition: background-color 0.3s ease, color 0.3s ease;
         }

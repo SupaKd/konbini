@@ -6,7 +6,7 @@ import MapSection from "../components/MapSection.jsx";
 import "./home.scss";
 
 export default function Home() {
-  const featured = PRODUCTS.slice(0, 3);
+  const featured = PRODUCTS.slice(0, 4);
 
   return (
     <main className="home">

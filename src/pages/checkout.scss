@@ -9,7 +9,7 @@
     font-weight: 700;
     text-align: center;
     margin-bottom: 1rem;
-    color: #111;
+    color: #1d3557;
     letter-spacing: 0.5px;
 
     @media (min-width: 768px) {
@@ -81,7 +81,7 @@
   &__title {
     font-size: 1rem;
     font-weight: 600;
-    color: #222;
+    color: #1d3557;
   }
 
   &__actions {
@@ -102,7 +102,7 @@
     .btn--outline {
       background: transparent;
       border: 1px solid #111;
-      color: #111;
+      color: #1d3557;
       padding: 0.3rem 0.7rem;
       border-radius: 6px;
       cursor: pointer;
@@ -111,7 +111,7 @@
       transition: all 0.2s ease;
 
       &:hover {
-        background: #111;
+        background: #E31530;
         color: #fff;
       }
     }
@@ -169,7 +169,7 @@
       margin-top: 1rem;
       display: inline-block;
       text-decoration: none;
-      background: #111;
+      background: #1d3557;
       color: #fff;
       padding: 0.9rem 1.5rem;
       border-radius: 8px;
@@ -179,7 +179,7 @@
       transition: background-color 0.3s ease, transform 0.2s ease;
 
       &:hover {
-        background-color: darken(#111, 8%);
+        background-color: #E31530;
         transform: translateY(-2px);
       }
     }

@@ -6,17 +6,29 @@ export default function Hero() {
     <section className="hero">
       <div className="container hero__grid">
         <div className="hero__copy">
-          <h1>Épicerie japonaise<br/>fraîche et locale</h1>
-          <p>Ramen, snacks, boissons et sauces sélectionnés. Click & Collect ou livraison.</p>
+          <h1>
+            Énergie. Audace.
+            <br />
+            Esprit Red Bull.
+          </h1>
+          <p>
+            Boissons iconiques, éditions limitées et accessoires exclusifs.
+            Commande en ligne ou livraison express.
+          </p>
+
           <div className="cta">
-            <Link to="/catalog" className="btn">Voir le catalogue</Link>
-            <Link to="/checkout" className="btn--outline">Commander</Link>
+            <Link to="/catalog" className="btn">
+              Voir les produits
+            </Link>
+            <Link to="/checkout" className="btn--outline">
+              Commander
+            </Link>
           </div>
         </div>
         <img
           className="hero__img"
-          src="/ramen.png"
-          alt="Bols de ramen"
+          src="/red.jpeg"
+          alt="redbull classic"
           loading="eager"
         />
       </div>

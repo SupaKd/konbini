@@ -6,6 +6,7 @@
   color: #1d3557;
   z-index: 50;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
 
   &__container {
@@ -18,21 +19,23 @@
   }
 
   &__logo {
-    font-weight: 700;
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: inherit;
+    width: 100px;
   }
 
   &__nav {
     display: flex;
     gap: 2rem;
 
+    .header__nav-logo{
+      display: none;
+    }
+
     a {
       text-decoration: none;
-      color: inherit;
+      color: #1d3557;
       position: relative;
-      font-weight: 500;
+
+
 
       &.active::after {
         content: "";
@@ -41,7 +44,8 @@
         left: 0;
         width: 100%;
         height: 2px;
-        background: var(--accent, #e9c46a);
+        background: var(--accent, #E32236);
+        color:#fff;
       }
 
       &:hover {
@@ -54,7 +58,7 @@
     @media (max-width: 768px) {
       position: fixed;
       inset: 0;
-      background: #1d3557;
+      background-color: #EBF1F9;
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -65,13 +69,16 @@
       &.is-open {
         transform: translateY(0);
       }
+      .header__nav-logo{
+        display: block;
+        width: 100px;
+      }
     }
   }
 
   &__actions {
     display: flex;
     align-items: center;
-    gap: 1rem;
   }
 
   &__btn {
@@ -79,7 +86,7 @@
     border: none;
     cursor: pointer;
     position: relative;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: inherit;
     display: inline-flex;
     align-items: center;
@@ -92,12 +99,12 @@
     }
 
     &:hover svg {
-      color: #e9c46a;
+      color: #E32236;
       transform: scale(1.15);
     }
 
     &--theme {
-      font-size: 1.3rem;
+      font-size: 1rem;
 
       &:hover svg {
         color: #ffcc00;
