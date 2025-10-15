@@ -1,14 +1,15 @@
 // src/App.jsx  (avec routes)
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import Header from "./components/Header.jsx";
-import Footer from "./components/Footer.jsx";
+import Header from "./layout/Header.jsx";
+import Footer from "./layout/Footer.jsx";
 import Home from "./pages/Home.jsx";
 import Catalog from "./pages/Catalog.jsx";
 import Checkout from "./pages/Checkout.jsx";
 import Product from "./pages/Product.jsx";
 import Payment from "./pages/Payment.jsx";
 import Shipping from "./pages/Shipping.jsx";
+import ScrollToTop from "./ui/ScrollToTop.jsx";
 
 export default function App() {
   const location = useLocation();
@@ -17,6 +18,7 @@ export default function App() {
   return (
     <div className="app">
       <Header />
+      <ScrollToTop />
       <main>
         <AnimatePresence mode="wait">
           <motion.div

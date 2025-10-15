@@ -7,8 +7,9 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer__grid">
         <div>
-          <h4>Ecom</h4>
-          <p>Horaires: 10:00–20:00.</p>
+          <h4>Horaires</h4>
+          <p>Lundi au Vendredi </p>
+          <p> 10:00–20:00</p>
         </div>
         <div>
           <h4>Liens</h4>
@@ -41,7 +42,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer__bar">
-        © {new Date().getFullYear()} Powered by SupaCo | Ecom
+        © {new Date().getFullYear()} Powered by <a href="https://supaco-digital.com/"><span>SupaCo</span></a> | Red Sellers
       </div>
     </footer>
   );

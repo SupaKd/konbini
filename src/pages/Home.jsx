@@ -4,6 +4,7 @@ import { PRODUCTS } from "../data/product.js";
 import ProductCard from "../components/ProductCard.jsx";
 import MapSection from "../components/MapSection.jsx";
 import "./home.scss";
+import YoutubeVideo from "../components/YoutubeVideo.jsx";
 
 export default function Home() {
   const featured = PRODUCTS.slice(0, 4);
@@ -25,7 +26,7 @@ export default function Home() {
           </Link>
         </div>
       </section>
-
+<YoutubeVideo />
           <MapSection />
       
     </main>

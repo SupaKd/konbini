@@ -32,18 +32,17 @@ export const PRODUCTS = [
     origin: "Autriche"
   },
   {
-    id: 3,
-    slug: "redbull-sugarfree-250ml",
-    title: "Red Bull Sugarfree 250ml",
-    price: 2.3,
-    img: "/sugar.jpeg",
-    category: "sugarfree",
-    desc: "Même énergie, sans sucre. Goût léger et frais.",
-    stock: 100,
-    rating: { avg: 4.7, count: 180 },
+    id: 6,
+    slug: "redbull-watermelon-edition",
+    title: "Red Bull Watermelon Edition",
+    price: 2.6,
+    img: "/fraise.jpeg",
+    category: "editions",
+    desc: "Édition Pastèque – goût rafraîchissant et fruité.",
+    stock: 90,
+    rating: { avg: 4.9, count: 310 },
     origin: "Autriche"
   },
-  
   {
     id: 5,
     slug: "redbull-tropical-edition",
@@ -59,17 +58,20 @@ export const PRODUCTS = [
     origin: "Autriche"
   },
   {
-    id: 6,
-    slug: "redbull-watermelon-edition",
-    title: "Red Bull Watermelon Edition",
-    price: 2.6,
-    img: "/fraise.jpeg",
-    category: "editions",
-    desc: "Édition Pastèque – goût rafraîchissant et fruité.",
-    stock: 90,
-    rating: { avg: 4.9, count: 310 },
+    id: 3,
+    slug: "redbull-sugarfree-250ml",
+    title: "Red Bull Sugarfree 250ml",
+    price: 2.3,
+    img: "/sugar.jpeg",
+    category: "sugarfree",
+    desc: "Même énergie, sans sucre. Goût léger et frais.",
+    stock: 100,
+    rating: { avg: 4.7, count: 180 },
     origin: "Autriche"
   },
+  
+ 
+
   {
     id: 7,
     slug: "redbull-blue-edition",

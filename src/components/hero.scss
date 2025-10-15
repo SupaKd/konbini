@@ -28,6 +28,11 @@ $accent: #111;
         font-size: 2.3rem;
         line-height: 1.2;
         margin-bottom: 1rem;
+
+        @media screen and (min-width: 768px) {
+          font-size: 3.2rem;
+          
+        }
       }
 
       p {
@@ -62,7 +67,7 @@ $accent: #111;
           transition: background-color 0.3s ease, transform 0.2s ease;
 
           &:hover {
-            background-color: #E32236;
+            background-color: #1d3557;
             transform: translateY(-2px);
           }
         }
@@ -80,7 +85,8 @@ $accent: #111;
           transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 
           &:hover {
-            background-color: #1d3557;
+            background-color: #E32236;
+            border: #E32236 2px solid;
             color: #fff;
             transform: translateY(-2px);
           }

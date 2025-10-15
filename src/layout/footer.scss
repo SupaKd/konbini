@@ -1,7 +1,6 @@
 .footer {
-  background-color: #1d3557;
+  background-color: #33415c;
   color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   padding: 2rem 1rem 1rem;
 
   .footer__grid {
@@ -10,6 +9,10 @@
     grid-template-columns: 1fr;
     text-align: center;
 
+    img{
+      width: 70px;
+      margin: 0 auto;
+    }
     h4 {
       font-size: 1.4rem;
       font-weight: 600;
@@ -69,6 +72,16 @@
     color: #fff;
     border-top: 1px solid #ddd;
     padding-top: 1rem;
+    span{
+      text-decoration: underline;
+      color:#C1131F;
+      font-weight: 900;
+      cursor: pointer;
+      transition: color 0.2s ease;
+      &:hover{
+        color: #e9c46a;
+      }
+    }
   }
 
   @media (min-width: 768px) {

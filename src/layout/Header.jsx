@@ -3,14 +3,14 @@ import { Link, NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faShoppingCart,
+  faBagShopping,
   faBars,
   faXmark,
   faMoon,
   faSun,
 } from "@fortawesome/free-solid-svg-icons";
 import { useCart } from "../context/CartContext.jsx";
-import CartDrawer from "./CartDrawer.jsx";
+import CartDrawer from "../components/CartDrawer.jsx";
 import "./header.scss";
 
 export default function Header() {
@@ -27,15 +27,16 @@ export default function Header() {
 
   useEffect(() => {
     const saved = localStorage.getItem("theme");
-    const systemDark =
-      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const systemDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
     const initial = saved || (systemDark ? "dark" : "light");
     setTheme(initial);
     document.documentElement.setAttribute("data-theme", initial);
   }, []);
 
   function toggleTheme() {
-    const next = theme === "dark" ? "light" : "dark";
+    const next = theme === "dark" ? "light" : "light";
     setTheme(next);
     document.documentElement.setAttribute("data-theme", next);
     localStorage.setItem("theme", next);
@@ -46,7 +47,7 @@ export default function Header() {
       <div className="header__container">
         {/* LOGO */}
         <Link to="/" className="header__logo">
-          <img src="/red.png" alt="Logo" />
+          <img src="/lo.png" alt="Logo" />
         </Link>
 
         {/* NAVIGATION */}
@@ -80,7 +81,7 @@ export default function Header() {
             onClick={() => setDrawer(true)}
             aria-label="Ouvrir le panier"
           >
-            <FontAwesomeIcon icon={faShoppingCart} />
+            <FontAwesomeIcon icon={faBagShopping} />{" "}
             {count > 0 && <span className="header__badge">{count}</span>}
           </button>
 
