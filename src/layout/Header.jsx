@@ -6,8 +6,7 @@ import {
   faBagShopping,
   faBars,
   faXmark,
-  faMoon,
-  faSun,
+  
 } from "@fortawesome/free-solid-svg-icons";
 import { useCart } from "../context/CartContext.jsx";
 import CartDrawer from "../components/CartDrawer.jsx";
@@ -17,7 +16,6 @@ export default function Header() {
   const { items } = useCart();
   const [open, setOpen] = useState(false);
   const [drawer, setDrawer] = useState(false);
-  const [theme, setTheme] = useState("light");
 
   const count = items.reduce((sum, item) => sum + item.qty, 0);
 
@@ -25,22 +23,9 @@ export default function Header() {
     document.body.style.overflow = open ? "hidden" : "auto";
   }, [open]);
 
-  useEffect(() => {
-    const saved = localStorage.getItem("theme");
-    const systemDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
-    const initial = saved || (systemDark ? "dark" : "light");
-    setTheme(initial);
-    document.documentElement.setAttribute("data-theme", initial);
-  }, []);
+  
 
-  function toggleTheme() {
-    const next = theme === "dark" ? "light" : "light";
-    setTheme(next);
-    document.documentElement.setAttribute("data-theme", next);
-    localStorage.setItem("theme", next);
-  }
+  
 
   return (
     <header className="header">
@@ -66,14 +51,7 @@ export default function Header() {
 
         {/* ACTIONS */}
         <div className="header__actions">
-          {/* Thème */}
-          <button
-            className="header__btn header__btn--theme"
-            onClick={toggleTheme}
-            aria-label="Changer le thème"
-          >
-            <FontAwesomeIcon icon={theme === "dark" ? faSun : faMoon} />
-          </button>
+         
 
           {/* Panier */}
           <button

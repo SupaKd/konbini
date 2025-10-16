@@ -123,6 +123,16 @@ $border-radius: 12px;
           .btn--outline {
             padding: 0.2rem 0.5rem;
             font-size: 0.8rem;
+            background-color: transparent;
+            border:none;
+            color: #1d3557;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+
+            &:hover {
+              background-color: #1d3557;
+              color: #fff;
+            }
           }
         }
       }

@@ -1,7 +1,7 @@
 /* src/pages/home.scss */
 
 .home {
-  background-color: #EBF1F9;
+  background-color: #ebf1f9;
   /* ======== SECTION PRODUITS POPULAIRES ======== */
   &__featured {
     margin: 2rem 0;
@@ -28,15 +28,17 @@
       .btn {
         text-align: center;
         margin-top: 1rem;
-        color: #111;
+        color: #e32236;
+        border: #e32236 2px solid;
         border-radius: 2rem;
         padding: 1rem;
         text-decoration: none;
-        background-color: #E32236;
-        color: #fff;
+        background-color: #f9f9f9;
 
         &:hover {
-          background-color: #e9c46a;
+          background-color: #1d3557;
+          border: #fff 2px solid;
+
           color: #fff;
           transition: background-color 0.3s ease, color 0.3s ease;
         }

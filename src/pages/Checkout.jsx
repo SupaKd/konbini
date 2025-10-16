@@ -59,7 +59,7 @@ export default function Checkout() {
                 <span>Total</span>
                 <strong>{total.toFixed(2)} €</strong>
               </div>
-              <Link className="checkout__btn" to="/shipping">
+              <Link className="checkout__btn1" to="/shipping">
                 Renseigner la livraison
               </Link>
             </div>
